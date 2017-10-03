@@ -8,6 +8,7 @@ public class MuistiPainike extends JButton {
 
 	public MuistiPainike(String x) {
 		super(x);
+		setVisible(true);
 	}
 
 	public int getX() {

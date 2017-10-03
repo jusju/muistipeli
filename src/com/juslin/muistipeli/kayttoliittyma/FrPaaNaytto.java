@@ -10,10 +10,13 @@ import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 
+import com.juslin.tyokalut.GenericRoundedButton;
+import com.juslin.tyokalut.MuistiPainike;
+
 public class FrPaaNaytto extends JFrame implements ActionListener{
 
 	private ArrayList<JButton> painikkeet = new ArrayList<JButton>();
-	private JButton[][] painikeTaulukko = new JButton[8][8];
+	private GenericRoundedButton[][] painikeTaulukko = new GenericRoundedButton[8][8];
 	
 	public FrPaaNaytto() {
 		setSize(400, 400);
@@ -31,7 +34,7 @@ public class FrPaaNaytto extends JFrame implements ActionListener{
 		int xKoordinaatit = 0;
 		int yKoordinaatit = 0;
 		for (int i = 0; i < 64; i++) {
-			JButton btUusiPainike = new JButton("X");
+			GenericRoundedButton btUusiPainike = new GenericRoundedButton("X");
 			painikeTaulukko[xKoordinaatit][yKoordinaatit] =  btUusiPainike;
 			xKoordinaatit++;
 			if(xKoordinaatit == 7) {
