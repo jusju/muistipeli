@@ -1,18 +1,22 @@
 package com.juslin.tyokalut;
 
 import java.awt.Color;
+import java.awt.Event;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
+import java.awt.event.FocusEvent;
+import java.awt.event.FocusListener;
 import java.awt.font.FontRenderContext;
 import java.awt.geom.Rectangle2D;
 
 import javax.jws.soap.SOAPBinding.Style;
 import javax.swing.JButton;
 
-public class GenericRoundedButton extends JButton {
+public class GenericRoundedButton extends JButton implements FocusListener {
 
 	public GenericRoundedButton(String text) {
 		super(text);
+		addFocusListener(this);
 	}
 
 	public GenericRoundedButton() {
@@ -55,5 +59,27 @@ public class GenericRoundedButton extends JButton {
 
 		// Draw the text in the center
 		g2d.drawString(getText(), xMargin, (float) getFont().getSize() + yMargin);
+		addFocusListener(this);
 	}
+	
+	
+	@Override
+	public boolean lostFocus(Event evt, Object what) {
+		// TODO Auto-generated method stub
+		return super.lostFocus(evt, what);
+	}
+
+	@Override
+	public void focusGained(FocusEvent e) {
+		System.out.println("Nyt tuli fokus!!!");
+		
+	}
+
+	@Override
+	public void focusLost(FocusEvent e) {
+		System.out.println("Nyt meni fokus!!!");
+		
+	}
+	
+	
 }
