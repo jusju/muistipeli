@@ -13,9 +13,6 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
-import com.juslin.tyokalut.GenericRoundedButton;
-import com.juslin.tyokalut.MuistiPainike;
-
 public class FrPaaNaytto extends JFrame implements ActionListener{
 
 	private ArrayList<JButton> kortit = new ArrayList<JButton>();
