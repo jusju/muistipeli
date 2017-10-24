@@ -16,7 +16,7 @@ import com.juslin.tyokalut.MuistiPainike;
 public class FrPaaNaytto extends JFrame implements ActionListener{
 
 	private ArrayList<JButton> painikkeet = new ArrayList<JButton>();
-	private GenericRoundedButton[][] painikeTaulukko = new GenericRoundedButton[8][8];
+	private JButton[][] painikeTaulukko = new JButton[8][8];
 	
 	public FrPaaNaytto() {
 		setSize(400, 400);
